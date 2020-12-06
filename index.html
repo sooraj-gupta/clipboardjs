@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Clipboard.js</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.5/styles/github-gist.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href = "style.css" rel = "stylesheet">
+		<link href = "mobile.css" rel = "stylesheet">
+	</head>
+	<body>
+		
+		<div class = "nav flexcenterboth">
+			<div class = "flexcentervert" id = "innernav">
+				<div style = "" class = "logocontainer">
+					<h1 class = "logo">clipboard.js</h1>
+					<span>By: Sooraj Gupta</span>
+				</div>
+				<div style = "" class = "githubcontainer">
+					<a class = "btn" style = "margin-right: 40px;" href = "https://github.com/sooraj-gupta/clipboardjs">GitHub</a>
+				</div>
+			</div>
+		</div>
+		<section class = "" style = "width: 100%;">
+			<center>
+				<div class = "content">
+					<h1>Easily add a "Copy to Clipboard" button using clipboard.js</h1>
+					<h4 class = "description">Sooraj Gupta <span class = "date">December 5, 2020</span></h4>
+					<img src ="https://image.freepik.com/free-photo/minimalist-copy-space-clipboard-notepad-top-view_23-2148379747.jpg">
+					
+					<p>Simply add this library to your website folder and get a "copy to clipboard" icon appear next to any text desired to be copied using the button. The following steps are needed to include clipboard.js in your website:</p>
+					<li>Download clipboard.js</li>
+					<li>Add to .html file</li>
+					<li>Specify which text to be <i>copyable</i></li>
+					
+					<h2>Download clipboard.js</h2>
+					<p style = "padding-bottom: 25px">Download the zipped file then move the unzipped folder to your website folder.</p>
+					<a href = "clipboard.zip" class = "download btn"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Download</a><br>
+					<p></p>
+					<br>
+					
+					<h2>Add to your HTML file</h2>
+					<p >First, place the following into the last line of the <code class = "tag"><span style = "color: black">&lt;</span>head<span style = "color: black">&gt;</span></code> section</p>
+					<pre><code class = "code">&lt;link href = "clipboard/clipboard.css"/&gt;</code></pre>
+					
+					<p >Then, place the following into the last line of the <code class = "tag"><span style = "color: black">&lt;</span>body<span style = "color: black">&gt;</span></code> section</p>
+					<pre><code class = "code">&lt;script src = "clipboard/clipboard.js"&gt;&lt;/script&gt;</code></pre>
+					
+					<p>Finally add the following line <strong>after</strong> the previous <code class = "tag"><span style = "color: black">&lt;</span>script<span style = "color: black">&gt;</span></code> tag </p>
+					<pre><code class = "code">&lt;script&gt; Clipboard.init(); &lt;/script&gt;</code></pre>
+					
+				</div>
+			</center>
+		</section>
+		<footer class = "flexcenterboth">
+			<center>
+				<h1>clipboard.js</h1>
+				<span>Copyright © Sooraj Gupta 2020</span>
+			</center>
+		</footer>
+		<div id = "scrollshadow"></div>
+		<script src = "clipboard.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+	</body>
+	</html>
