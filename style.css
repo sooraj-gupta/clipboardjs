@@ -55,12 +55,12 @@ h1 {
 	padding-top: 12px;
 }
 
-#innernav {
+.innernav {
 	width: 100%;
 	max-width: 1300px;
 	text-align: left;
 }
-#innernav span
+.innernav span
 {
 	font-size: 12px;
 	padding-left: calc( 40px ); 
@@ -192,4 +192,9 @@ footer h1
 	font-weight: 400;
 	padding: 20px 0;
 	padding-top: 0;
+}
+
+svg {
+	width: 0.9em;
+	padding: 0;
 }
