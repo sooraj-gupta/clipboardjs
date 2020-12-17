@@ -12,10 +12,12 @@
 		<title>Clipboard.js</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.5/styles/github-gist.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href = "style.css" rel = "stylesheet">
 		<link href = "mobile.css" rel = "stylesheet">
-		
+		<link href = "clipboard/clipboard.css" rel = "stylesheet">
+		<link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADlklEQVRYCcVXSyhtURj+kcfJ45CBlJLHvTOTO5MRJZSBgYE7oZQZKWbMSKTjNaKOQ0phwggTDCgZnCJOioGUGLhXSbnpOny3b7X3bj8WHZzbWbXb6/E/vr3W/3//2iKxN7+I/BSRoIiEReS3iESNh33OcY0ylI1b+y4iIRH5IyKI8aEsdaj76eYTkYCI/I3RqQ4cdWmDtj7UvolI5AuO3WBoizZjaj9E5FccnZtgaJO2321E+T+c20G8uRM8p3huu+nU/aYPbUwwWNzC/2tMX47GdPlKtH8UKH05UpQ56zGSk5ODrq4uLC4uYm1tDTMzM2hubkZKSopHlvqVlZWYnJzE6uoqFhYW0N7ejvT0dK2swRNqF8haHpIpKirC5eUlTk9PMTIygr6+PszNzeHh4QF7e3vIyspyGB4eHsbz8zNWVlbQ39+P8fFxXF9f4/j4GAUFBQ5Z42PpUzEmqdMjMD09jXA4jLS0NMdaaWkpbm9vMTQ0ZM3X1tbi5eUFDQ0N1hxt5uXlIRKJYHl52TFv80ffir89AvxKfrlN2OpPTU1hf3/fGodCIWxvb1tju05bWxuenp6QmpqqW2ftUEXEs7i0tITd3V3teVdVVaG1tdXS2djYwOzsrDW2A6ioqMD6+rrnyAwZFjBV1TzKVLy/v8fOzg7o0G7U3d/c3EQwGHxXxq1jjFlFVUnVKpeVlanzi0ajODo6QkdHBzIyMjyybgCUKSkpcTxJSUkePcP32wBM1MXFxWCU393d4erqCk1NTQ5jbgAMSnfLz8936Bi2eZ/QH4Hp3P7Ozs7G2NiYinjygbnmBsCv5S7wqa+vV1jeAKCOgIFgGWOfETs6Oqq20L3G8fz8PA4PDy2d94KwpqZGAWBKamypIGQqOBaZ+6+vr2hsbHTMm3Ld3d2KZMwxAW1tbWllW1pa8Pj4iOTkZN26SkMtER0cHCij7qDj7jA9SbcmABIQiaiurs6a45rP5wPtMKVNWddbEZGWipmGNzc3uLi4QCAQQE9PDwYGBnBycqICsby83GF0YmJCUTHrRm9vLwYHB3F+fo6zszMUFhY6ZA0QFhUzELXFKDc3F9xufgEDjZTKsd/v1xlEdXW1KliMCdaEzs5OZGZmamXtxYgAEl6OCSKhFxICSPiVjCASeiklALaEXssNDGon4nlD/tCPiQmCMcHA/Mpl9dO/ZiYIvpmiCfk5tYNgn4xJ6iR/s4jE5ff8HzYLHs0NdS0xAAAAAElFTkSuQmCC" rel="icon" type="image/x-icon" />
+
+
 	</head>
 	<body>
 		
@@ -50,26 +52,42 @@
 					
 					<h2>Add to your HTML file</h2>
 					<p >First, place the following into the last line of the <code class = "tag"><span style = "color: black">&lt;</span>head<span style = "color: black">&gt;</span></code> section</p>
-					<pre><code class = "code">&lt;link href = "clipboard/clipboard.css"/&gt;</code></pre>
+					<pre data-clipboard = "copy"><code class = "code">&lt;link href = "clipboard/clipboard.css"/&gt;</code></pre>
 					
 					<p >Then, place the following into the last line of the <code class = "tag"><span style = "color: black">&lt;</span>body<span style = "color: black">&gt;</span></code> section</p>
-					<pre><code class = "code">&lt;script src = "clipboard/clipboard.js"&gt;&lt;/script&gt;</code></pre>
+					<pre data-clipboard = "copy"><code class = "code">&lt;script src = "clipboard/clipboard.js"&gt;&lt;/script&gt;</code></pre>
 					
 					<p>Finally add the following line <strong>after</strong> the previous <code class = "tag"><span style = "color: black">&lt;</span>script<span style = "color: black">&gt;</span></code> tag </p>
-					<pre><code class = "code">&lt;script&gt; Clipboard.init(); &lt;/script&gt;</code></pre>
+					<pre data-clipboard = "copy"><code class = "code">&lt;script&gt; Clipboard.init(); &lt;/script&gt;</code></pre>
 					
+					<h2 >Specify which text to be Copyable</h2>
+					<p>In order to make sure the copy button shows up, you must specify the elements should be copyable. This is done by setting the <code class = "tag" style = "color: darkviolet">data-clipboard</code> attribute to "copy"</p>
+					<pre data-clipboard = "copy"><code class = "code">&lt;h1 data-clipboard = "copy"&gt;Hello World!&lt;/h1&gt;</code></pre>
+					<br>
+					<hr>
+					<p></p>
+					<a href = "clipboard.zip" class = "download btn"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Download</a><br>
 				</div>
 			</center>
 		</section>
 		<footer class = "flexcenterboth">
 			<center>
-				<h1>clipboard.js</h1>
-				<span>Copyright © Sooraj Gupta 2020</span>
+				<h1 style = "font-size: 25px">clipboard.js</h1>
+				<span>© 2020 Sooraj Gupta </span>
 			</center>
 		</footer>
 		<div id = "scrollshadow"></div>
-		<script src = "clipboard.js"></script>
+		<script src = "clipboard/clipboard.js"></script>
+		<script> Clipboard.init(); </script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script>
-		<script>hljs.initHighlightingOnLoad();</script>
+		<script>hljs.initHighlightingOnLoad();
+		var ip;
+		fetch( 'https://api.ipify.org/?format=json' ).then( results => results.json()).then( data => print(data.ip) );
+		function print( ip )
+		{
+			this.ip = ip 
+			//fetch( 'http://www.geoplugin.net/json.gp?ip=<your ip here>&jsoncallback=' )
+		}
+		</script>
 	</body>
 	</html>

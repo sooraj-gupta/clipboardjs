@@ -140,8 +140,6 @@ pre .code {
 	background-color: #efefef;
 	word-wrap: break-word;
 	word-break: break-all;
-	position: relative
-	font-si
 }
 code *, code
 {
@@ -150,6 +148,7 @@ code *, code
 }
 pre {
 	margin-bottom: 25px;
+	position: relative;
 }
 
 .tag {
@@ -197,4 +196,11 @@ footer h1
 svg {
 	width: 0.9em;
 	padding: 0;
+}
+
+
+
+hr {
+	border: 1px solid #ddd;
+	border-top: none;
 }
