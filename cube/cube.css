@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+:root
+{
+	--size: calc( 5vw + 50px );
+	--shadowcolor:#111;
+	--lightcolor: #222;
+}
+body, html
+{
+	padding: 0;
+	margin: 0;
+}
+.scene
+{
+	width: var(--size);
+	height: var(--size);
+	perspective: calc( var(--size) * 4 );
+}
+.cube
+{
+	width: 100%;
+  	height: 100%;	
+	position: relative;
+  	transform-style: preserve-3d;
+	transition: 0.75s;
+}
+.face
+{
+	--half: calc( var(--size)/2);
+	font-family: "Rubik";
+	font-size: calc( var(--half) );
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: 0.75s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-style: preserve-3d;
+}
+.face span
+{
+	transform: translateZ( 10px );
+	width: 1em;
+	height: 1em;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.right span
+{
+	transform: rotateZ(-90deg) translateZ( 10px );
+}
+.left span
+{
+	transform: rotateZ(90deg) translateZ( 10px );
+}
+
+
+.front span
+{
+}
+
+.back span
+{
+	
+}
+
+.top span
+{
+	
+}
+
+.bottom span
+{
+	
+}
+
+.left span
+{
+	
+}
+
+.right span
+{
+	
+}
+
+
+.front
+{
+	background-color: var(--shadowcolor);
+	transform: rotateY(0deg) translateZ( calc( var(--half) ) );
+}
+.back
+{
+	background-color: var(--shadowcolor);
+	transform: rotateY(180deg) translateZ( calc( var(--half) ) );
+}
+.top
+{
+	background-color: var(--shadowcolor);
+	transform: rotateX(90deg) translateZ( calc( var(--half) ) );
+}
+.bottom
+{
+	background-color: var(--shadowcolor);
+	transform: rotateX(-90deg) translateZ( calc( var(--half) ) );
+}
+.left
+{
+	background-color: var(--shadowcolor);
+	transform: rotateY(-90deg) translateZ( calc( var(--half) ) );
+}
+.right
+{
+	background-color: var(--shadowcolor);
+	transform: rotateY(90deg) translateZ( calc( var(--half) ) );
+}
+
+.ahead
+{
+	background-color: var(--lightcolor);
+}
+
+.ff
+{
+	transform: rotateY(0deg) rotateX(0deg);
+}
+.bkf
+{
+	transform: rotateY(180deg) rotateX(0deg);
+}
+.tf
+{
+	transform: rotateY(0deg) rotateX(-90deg);
+}
+.btf
+{
+	transform: rotateY(0deg) rotateX(90deg);
+}
+.lf
+{
+	transform: rotateY(90deg) rotateX(90deg);
+}
+.rf
+{
+	transform: rotateY(-90deg) rotateX(90deg);
+}
+.cube:hover > .front
+{
+	transform: rotateY(0deg) translateZ( calc( var(--half) + 30px ) );
+}
+
+.cube:hover > .back
+{
+	transform: rotateY(180deg) translateZ( calc( var(--half) + 30px ) );
+}
+.cube:hover > .top
+{
+	transform: rotateX(90deg) translateZ( calc( var(--half) + 30px ) );
+}
+.cube:hover > .bottom
+{
+	transform: rotateX(-90deg) translateZ( calc( var(--half) + 30px ) );
+}
+.cube:hover > .left
+{
+	transform: rotateY(-90deg) translateZ( calc( var(--half) + 30px ) );
+}
+.cube:hover > .right
+{
+	transform: rotateY(90deg) translateZ( calc( var(--half) + 30px ) );
+}
+
+
+.explode .face
+{
+	transition-timing-function: cubic-bezier(0.4,1,0,1);
+	background-color: transparent;
+}
+.explode > .front
+{
+	transform: rotateY(0deg) translateZ( 100vw );
+}
+
+.explode > .back
+{
+	transform: rotateY(180deg) translateZ( 100vw );
+}
+.explode > .top
+{
+	transform: rotateX(90deg) translateZ( 100vw );
+}
+.explode > .bottom
+{
+	transform: rotateX(-90deg) translateZ( 100vw );
+}
+.explode > .left
+{
+	transform: rotateY(-90deg) translateZ( 100vw );
+}
+.explode > .right
+{
+	transform: rotateY(90deg) translateZ( 100vw );
+}
+
+
+
+.loading {
+	transition: 0.5s;
+	opacity: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+}
+
+.wrapper {
+	width: 100%;
+	display: none;
+}
