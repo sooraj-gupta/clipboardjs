@@ -1,3 +1,9 @@
+/* 
+ * ALL CODE BY: SOORAJ GUPTA
+ * COPYRIGHT © 2020 SOORAJ GUPTA
+ * Last Updated: December 2020
+ */
+
 function init()
 {
 	if( settings.load ){
@@ -40,7 +46,7 @@ function load()
 		document.getElementsByClassName("cube")[0].classList.toggle("explode");
 		document.getElementsByClassName( "loading" )[0].style.opacity = "0";
 		setTimeout( function () { document.getElementsByClassName("loading")[0].style.display = "none"}, 400 );
-	}, settings.rotations * 1100 );
+	}, settings.rotations * 1200 );
 }
 init();
 document.body.onload = function()
