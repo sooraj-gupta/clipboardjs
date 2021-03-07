@@ -14,8 +14,8 @@
 :root
 {
 	--size: calc( 5vw + 50px );
-	--shadowcolor:#87aa64;
-	--lightcolor: #c0ea97;
+	--shadowcolor:#e0daac;
+	--lightcolor: #f0e8d4;
 }
 
 
@@ -50,6 +50,9 @@ body, html
 {
 	padding: 0;
 	margin: 0;
+}
+body{
+	overflow:hidden;
 }
 .scene
 {

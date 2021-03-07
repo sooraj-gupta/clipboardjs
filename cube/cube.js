@@ -36,6 +36,7 @@ function load()
 		else
 		{
 			document.getElementsByClassName("face")[4].classList.add("ahead");
+			document.getElementsByClassName("face")[5].classList.add("ahead");
 			document.getElementsByClassName("cube")[0].style.transform = "rotateX( 45deg) rotateY( 45deg ) rotateZ( 90deg)"
 		}
 		rotations ++;
@@ -46,6 +47,7 @@ function load()
 		document.getElementsByClassName("cube")[0].classList.toggle("explode");
 		document.getElementsByClassName( "loading" )[0].style.opacity = "0";
 		setTimeout( function () { document.getElementsByClassName("loading")[0].style.display = "none"}, 400 );
+		document.body.style.overflow = "visible";
 	}, settings.rotations * 1200 );
 }
 init();
